@@ -9,6 +9,10 @@ Install the MySQL client and/or server.
    See the full `Salt Formulas installation and usage instructions
    <http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html>`_.
 
+   If running a stand-alone minion including the formula using gitfs will generate an error
+   about not being able to import `mysql/defaults.yaml`. Adding the formula to the file_roots
+   setting does not generate this error. 
+
 Available states
 ================
 
@@ -94,5 +98,4 @@ Install the MySQL development libraries and header files.
 
 .. note::
     Note that this state is not installed by the mysql meta-state unless you set
-    your pillar data accordingly. 
-
+    your pillar data accordingly.
